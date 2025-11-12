@@ -14,6 +14,7 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.o.number = true
+
 -- You can also add relative line numbers, to help with jumping.
 vim.o.relativenumber = true
 
