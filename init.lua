@@ -107,6 +107,9 @@ keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- Custom keymaps
 keymap('i', 'jj', '<ESC>')
 
+keymap('n', 'H', '^')
+keymap('n', 'L', '$')
+
 keymap('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move current line up', noremap = true, silent = true })
 keymap('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move current line down', noremap = true, silent = true })
 keymap('n', 'j', 'gj', { noremap = true, silent = true })
