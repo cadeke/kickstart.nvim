@@ -109,6 +109,10 @@ keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- Custom keymaps
 keymap('i', 'jj', '<ESC>')
 
+keymap('n', '<leader>w', function()
+  vim.wo.wrap = not vim.wo.wrap
+end, { desc = 'Toggle wrap' })
+
 keymap('n', 'H', '^')
 keymap('n', 'L', '$')
 
@@ -166,9 +170,7 @@ rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 
--- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
@@ -507,6 +509,11 @@ require('lazy').setup({
   },
   { import = 'custom.plugins' },
 }, {
+  checker = {
+    enabled = true,
+    notify = false,
+    checkFrequency = 3600,
+  },
   rocks = { enabled = false },
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

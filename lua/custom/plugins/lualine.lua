@@ -9,7 +9,7 @@ return {
     -- configure lualine with modified theme
     lualine.setup {
       options = {
-        theme = 'nightfly',
+        theme = 'rose-pine',
         component_separators = { left = '', right = '  ' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = { 'NvimTree' },
